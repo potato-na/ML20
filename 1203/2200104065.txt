@@ -1,0 +1,15 @@
+Precision is calculated by (True Positives) / (True Positives + False Positives).  In other words,
+it is the percentage of members assigned to class 'C' which actually belong to that class.
+
+Recall is calculated by (True Positives) / (True Positives + False Negatives).  In other words,
+it is the percentage of members which actually belong to 'C' which were also assigned to class 'C'.
+
+Both precision and recall are important measures of the classifier's ability, but they are
+calculating very different things and so it is not appropriate to take their simple arithmetic mean.
+Additionally, while they are calculated using the same numerator, the number of patterns covered by
+the denominator is different.
+
+Using the harmonic mean also punishes trivial solutions.  For example, consider a dataset which is
+evenly divided between C and ~C.  A classifier which classifies every pattern as belonging to 'C'
+will have a precision of 0.5, and a recall of 1.0.  The f-measure is only equal to 2/3, while the
+simple mean equals 3/4.
