@@ -1,0 +1,1 @@
+精度と再現率はそれぞれ確率であり、精度は(True Positive)/(True Positive + False Positive)で求められ、再現率は(True Positive)/(True Positive + False Negative)で求められる。それぞれの確率の分母が異なるために、調和平均を用いる。
