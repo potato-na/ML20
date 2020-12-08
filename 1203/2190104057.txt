@@ -1,0 +1,24 @@
+機械学習特論
+レポート課題
+知能情報工学分野　2190104057　堀本　和寛
+
+・課題文
+In pattern recognition, precision and recall are an important measure to estimate performance.
+
+F-measure is the harmonic mean of precision and recall.
+
+Consider why F-measure is calculated by "harmonic mean."
+
+
+Make a report and submit to GitHub repository ML20/1203 as {Student ID number}.txt. You also submit that file to this portal.
+
+
+・解答文
+調和平均とは、逆数の算術平均の逆数と言われています。
+算術平均というのは、例えば食塩水などでは100ｇの食塩水濃度３％と５％の平均をとるときは算術平均を使用します。
+これにより、濃度は（３＋５）÷２＝４％となります。つまり分母が同じ場合に用いられます。
+一方で、調和平均を用いる場合は分子が同じ場合です。例えば、１００ｇの濃度６％、２００ｇの濃度３％があるとしたとき、これらの食塩はどちらも６ｇで同じになります。このような時に、調和平均を用いるのが適切とされています。
+この時の調和平均は、25になります。つまり算術平均では1/25で濃度は4%になります。
+そしてF値の算出では、感度（recall）と適合率(precision)の平均です。
+ここで感度は（真陽性）/(真陽性＋偽陰性)と定義されており、適合度は
+（真陽性）/(真陽性＋偽陽性)と定義されています。これにより、分子が二つとも同じなので調和平均を用いるのが適切だと考えられます。
