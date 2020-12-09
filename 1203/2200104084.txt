@@ -1,0 +1,23 @@
+Machine learning is a widely used tool in domains working with artificial intelligence and is a promising technique that made major progressed during the last few years.
+ A significant part of machine learning is observing data to try to find the pattern that generated it. That is why it is essentially the same thing as pattern recognition.
+ Once a machine learning algorithm has been trained enough by being fed data, it can use what was learned to make prediction of what can be expected from the following data.
+ However, another aspect of machine learning is also checking the efficiency of a trained program : that the data predicted by a machine learning algorithm is close
+ enough to the real data that can be observed in reality.
+
+Therefore, when using machine learning for some application, an important part of the problem is always to test the algorithm give suitable answers.
+ To this objective the F-measure is a way of checking the validity of the measures. The F-measure consider 2 important elements of evaluation : 
+ Precision and Recall. First, the precision is a measure that counts the number of true positive measures founds over the number of false positive found.
+ Having a test with a good precision means that when the test gives us a positive value, we can be sure the value is very well positive.
+ On the other hand, recall gives us the number of true positive found over the total number of positive results that exist. An excellent recall performance
+ means that the test will find all positive values and will not miss any. To evaluate the performance of a test, it is important to evaluate both aspects of a test.
+ For example, a test might have an excellent precision but a terrible recall meaning that, while all our test measures may be correct, we missed a lot of results and
+ the test performed poorly overall. 
+
+The F-measure evaluates the quality of a test by evaluating both its precision and recall using a harmonic mean expressed as : 
+
+								F_1 = 2 * precision*recall/(Precision+Recall)
+
+To have a pertinent F-measure, using an arithmetic mean is not suitable. For example, for a test having a precision of 1 but a recall of 0,
+ the arithmetic mean would rate the algorithm with a 0,5 while the algorithm could find no answer. A harmonic mean will give an F-measure of 0,
+ correctly evaluating the performances of the test. As such, a harmonic mean punishes greatly a test with either a bad precision or a bad recall.
+ Therefore, a harmonic mean to calculate the F-measure is used to give as much importance to the precision and to the recall of a test
