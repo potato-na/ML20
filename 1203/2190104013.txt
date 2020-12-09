@@ -1,0 +1,2 @@
+For accuracy and recall, the numerator is the same and the denominator is different, so it is natural to use the harmonic mean instead of the arithmetic mean when averaging.
+As an extreme example, consider the case where the precision rate is 1 and the recall rate is 0.0001. When using the arithmetic mean, the result is about 50 percent correct, despite the bad results. On the other hand, when the harmonic mean is used, the result is almost 0%, which is suitable for this situation.
