@@ -1,8 +1,8 @@
 To understand why F-measure is calculated with the harmonic mean, I will first clearly state what both precision and recall are.
 Precision corresponds to the all the elements that are relevant among all the elements that were retrived.
 Recall on his side is the number of relevant elements that are selected among all the relevant elements.
-They both describre two separate things and they do not consider the same amount of data. 
+They both describe two separate things and they do not consider the same amount of data. 
 While precision consider all the retrieved data, recall focus only on the relevant elements even those which weren't retrieved.
 This means that they both have different denominators.
-That is why a harmonic mean is necessary to compute the F-measure because it overcomes this problem of different denominators which is something that the normal mean cannot.
+That is why a harmonic mean is necessary to compute the F-measure because it overcomes this problem of different denominators which is something the normal mean cannot.
 The harmonic mean will be able to consider both precision and recall evenly even with those different denominators. It does in some way "average" them to compute on the same scale.
