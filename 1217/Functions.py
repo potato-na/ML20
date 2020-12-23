@@ -3,7 +3,7 @@ import numpy as np
 class function1():
     def __init__(self):
         """
-        self.boundaries is the range of x and y axis
+         self.boundaries is the range of x and y axis
         """
         self.boundaries = np.array([-5.12, 5.12])
 
@@ -19,7 +19,7 @@ class function1():
 class function2():
     def __init__(self):
         """
-        self.boundaries is the range of x and y axis
+         self.boundaries is the range of x and y axis
         """
         self.boundaries = np.array([-5, 5])
 
