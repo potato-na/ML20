@@ -2,6 +2,7 @@ from model.rf import RandomForest
 from data.data_processing import DataLoader
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedKFold
+import numpy as np
 import json
 
 
@@ -16,6 +17,8 @@ def main():
 
 	dl = DataLoader(comic_dic)
 	x, y = dl.create_data()
+	x = np.array(x)
+	y = np.array(y)
 	features = dl.get_feature_name()
 	print(len(x), len(y))
 	print(len(x[0]))
@@ -28,6 +31,7 @@ def main():
 	# パラメータサーチ
 	RF = RandomForest(x_train=_x_train, y_train=_y_train, x_test=_x_valid, y_test=_y_valid)
 	params = RF.run(use_optuna=True, n_trials=50)
+	#params = {'n_estimators':32, 'max_depth':128, 'min_samples_split':2, 'max_features':16}
 
 	# 5 分割交差検証
 	kf = StratifiedKFold(n_splits=5, shuffle=True)
@@ -58,7 +62,7 @@ def main():
 	fti_means = np.mean(ftis, axis=0)
 	fti_stds = np.std(ftis, axis=0)
 	for i in range(len(fti)):
-		print(i, fti_means[i], fti_stds[i])
+		print(features[i], fti_means[i], fti_stds[i])
 
 
 
